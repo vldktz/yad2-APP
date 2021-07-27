@@ -1,0 +1,37 @@
+export const NAVIGATION_URLS = {
+    homePage: '',
+    addUser: 'add-user',
+    newUser: 'new-user',
+    editUser: 'edit-user',
+    login: 'login',
+    restore: 'forgot',
+    resetPassword: 'reset-password',
+    settings: 'settings',
+    projects: 'projects',
+    calendar: 'calendar',
+    users: 'users',
+    mails: 'mails',
+    exhibits: 'exhibits',
+    singleExhibit: 'exhibit',
+    exhibitsSettings: 'exhibits-settings',
+    singleProject: 'single-project',
+    addProject: 'add-project',
+    stats: 'stats',
+    logout: 'logout',
+};
+
+export const ERRORS = {
+    1: 'פורמט המייל או הסיסמא לא תקינים',
+    2: 'שם משתמש או סיסמא לא נכונים',
+    3: 'דואר אלקטרוני הוא שדה חובה',
+    4: 'משתמש לא קיים',
+    5: 'יש להתחבר מחדש',
+    6: 'נכשל בשליחה דואר אלטרוני',
+    7: 'נכשל בעדכון סיסמא',
+    8: 'סיסמאות לא תואמות',
+    9: 'יש להתחבר מחדש',
+    11: 'פרטים שגויים, יש למלא את כל השדות לפני השמירה',
+    28: 'כתובת מייל כבר קיימת במערכת',
+    29: 'לא ניתן למחוק גורם מטפל שמקושר לאירוע',
+    500: 'שגיאת מערכת'
+};
