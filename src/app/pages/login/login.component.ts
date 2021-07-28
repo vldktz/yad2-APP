@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         if (this.loginForm.valid) {
             this.subscriptions.push(
                 this.userRoute.loginUser(this.loginForm.getRawValue()).subscribe((response) => {
-                    if (response && response.data) {
+                    if (response?.data) {
                         this.snackBar.open(`Hello ${response.data.fullName}`, 'close', {
                             duration: 5000,
                             panelClass: ['green-snackbar']

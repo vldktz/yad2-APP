@@ -1,0 +1,43 @@
+:host{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#actions-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+table{
+    width: 100%;
+}
+
+#offers-grid-container{
+    max-height: 70vh;
+    overflow-y: auto;
+    mat-card{
+        width: 100%;
+        background-color: #d3d3d33b;
+    }
+
+    mat-card.offer-card{
+
+        display: flex;
+        flex-direction: column;
+
+        .mat-card-content{
+            flex-grow: 1;
+        }
+    }
+
+}
+
+#offers-table-container{
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+

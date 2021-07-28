@@ -62,7 +62,7 @@ export class UserComponent implements OnInit {
             if(this.user){
                 this.subscriptions.push(
                     this.userRoute.updateUser(params.id,params).subscribe((response) => {
-                        if (response && response.data) {
+                        if (response?.data) {
                             this.snackBar.open('Info updated', 'close', {
                                 duration: 5000,
                                 panelClass: ['green-snackbar']
@@ -75,7 +75,7 @@ export class UserComponent implements OnInit {
             } else {
                 this.subscriptions.push(
                     this.userRoute.createNewUser(params).subscribe((response) => {
-                        if (response && response.data) {
+                        if (response?.data) {
                             this.snackBar.open(`Welcome ${response.data.fullName}`, 'close', {
                                 duration: 5000,
                                 panelClass: ['green-snackbar']

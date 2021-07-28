@@ -18,6 +18,8 @@ export interface IOffer{
     offerTypeID: number | string,
     phoneNumber: string,
     email: string
+    User: IUser,
+    OfferType: IOfferType
 }
 
 export interface IOfferType{
@@ -40,5 +42,3 @@ export interface IMenuItem {
     text: string;
     callBack? : Function;
 }
-
-

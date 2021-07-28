@@ -22,6 +22,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSelectModule} from "@angular/material/select";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import { TruncatePipe } from './utils/pipes/truncate.pipe';
 
 @NgModule({
     declarations: [
@@ -30,6 +33,7 @@ import {MatSelectModule} from "@angular/material/select";
         UserComponent,
         OffersComponent,
         NewOfferDialogComponent,
+        TruncatePipe,
     ],
     imports: [
         BrowserModule,
@@ -49,7 +53,9 @@ import {MatSelectModule} from "@angular/material/select";
         MatSnackBarModule,
         MatDialogModule,
         MatSelectModule,
-        MatOptionModule
+        MatOptionModule,
+        MatTableModule,
+        MatSortModule
     ],
     providers: [],
     bootstrap: [AppComponent]

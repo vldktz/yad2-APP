@@ -44,7 +44,7 @@ export class NewOfferDialogComponent implements OnInit, OnDestroy {
     private getOfferTypes() {
         this.subscriptions.push(
             this.offerTypeRoute.getAllOfferTypes().subscribe((response) => {
-                if (response && response.data) {
+                if (response?.data) {
                     this.offerTypes = response.data;
                     this.initForm();
                 } else {
@@ -64,7 +64,7 @@ export class NewOfferDialogComponent implements OnInit, OnDestroy {
             title: new FormControl('', [Validators.required]),
             description: new FormControl('', [Validators.required, Validators.maxLength(200)]),
             offerTypeID: new FormControl(undefined, [Validators.required]),
-            phoneNumber: new FormControl('', [Validators.required]),
+            phoneNumber: new FormControl('', [Validators.required,Validators.pattern(/^0\d([\d]{0,1})([-]{0,1})\d{7}$/)]),
             email: new FormControl('', [Validators.required, Validators.email]),
         })
     }
@@ -73,7 +73,7 @@ export class NewOfferDialogComponent implements OnInit, OnDestroy {
         if (this.offerForm?.valid) {
             this.subscriptions.push(
                 this.offerRoute.createNewOffer(this.offerForm.getRawValue()).subscribe((response) => {
-                    if (response && response.data) {
+                    if (response?.data) {
                         this.snackBar.open('Offer published successfully', 'close', {
                             duration: 5000,
                             panelClass: ['green-snackbar']
