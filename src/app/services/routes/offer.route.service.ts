@@ -8,7 +8,7 @@ import {IApiResponse, IOffer, IOfferSearch} from "../../interfaces/app.interface
 })
 export class OfferRouteService {
 
-    private baseUrl = '/offer';
+    private baseUrl = '/offers';
 
     constructor(private httpSenderService: HttpSenderService) { }
 

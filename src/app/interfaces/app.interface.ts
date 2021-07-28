@@ -8,7 +8,7 @@ export interface IUser {
     id: number | string;
     email: string;
     fullName: string;
-    phoneNumber: string;
+    password: string;
 }
 
 export interface IOffer{
@@ -20,13 +20,25 @@ export interface IOffer{
     email: string
 }
 
+export interface IOfferType{
+    id: number | string
+    name: string
+}
+
 export interface IOfferSearch{
     offerTypeID: number | string
 }
 
 export interface IUserLogin {
-  Email: string;
-  Password: string;
+  email: string;
+  password: string;
+}
+
+export interface IMenuItem {
+    path: string;
+    icon: string;
+    text: string;
+    callBack? : Function;
 }
 
 

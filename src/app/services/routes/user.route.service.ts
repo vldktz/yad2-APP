@@ -21,7 +21,7 @@ export class UserRouteService {
     public logoutUser():Observable<IApiResponse<any> | null> {
         return this.httpSenderService.sendHttpRequest(`${this.baseUrl}/logout`, 'POST', null);
     }
-    public updateUser(user: IUser):Observable<IApiResponse<any> | null> {
-        return this.httpSenderService.sendHttpRequest(this.baseUrl, 'PUT', user);
+    public updateUser(id: number,user: IUser):Observable<IApiResponse<any> | null> {
+        return this.httpSenderService.sendHttpRequest(`${this.baseUrl}/${id}`, 'PUT', user);
     }
 }
