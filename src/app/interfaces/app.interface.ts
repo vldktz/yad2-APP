@@ -35,10 +35,3 @@ export interface IUserLogin {
   email: string;
   password: string;
 }
-
-export interface IMenuItem {
-    path: string;
-    icon: string;
-    text: string;
-    callBack? : Function;
-}

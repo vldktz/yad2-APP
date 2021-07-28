@@ -4,6 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
     name: 'truncate'
 })
 
+/**
+ * text shortening pipe
+ */
 export class TruncatePipe implements PipeTransform {
 
     transform(value: string, args: any[]): string {

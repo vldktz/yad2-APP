@@ -20,7 +20,13 @@ export class HttpSenderService {
     ) {
     }
 
-
+    /**
+     * basic http send function
+     * @param url
+     * @param method
+     * @param params
+     * @return Observable<IApiResponse>
+     */
     public sendHttpRequest<T>(url: string, method: string, params: any): Observable<IApiResponse<T> | null> {
         let headers = new HttpHeaders({'Content-Type': 'application/json; charset=UTF-8'});
         url = environment.apiUrl + url;
@@ -53,6 +59,10 @@ export class HttpSenderService {
         }
     }
 
+    /**
+     * Http request error handler function
+     * @param err
+     */
     private handleError = (err: any) =>  {
         if (err.status === 403){
             this.router.navigate(['/']);

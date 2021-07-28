@@ -14,11 +14,18 @@ export class UserService {
     }
     private user: IUser | undefined;
 
+    /**
+     * set user to local storage
+     * @param user
+     */
     public setUser = (user:IUser) => {
         this.user = user;
         localStorage.setItem(`${environment.appName}_user`, JSON.stringify(user));
     }
 
+    /**
+     * remove user from local storage
+     */
     public removeUser() {
         this.user = undefined;
         localStorage.removeItem(`${environment.appName}_user`);
@@ -27,6 +34,9 @@ export class UserService {
         }, 1000)
     }
 
+    /**
+     * get user from local storage
+     */
     public getUser(): Observable<IUser> {
         return new Observable((observer) => {
             if (this.user) {
