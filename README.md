@@ -1,27 +1,19 @@
-# App
+# Yad 2 Message Board App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+this is a home assignment for Vlad katz
 
-## Development server
+the app includes 2 main pages: 
+1. Login page
+2. Offers page
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Also, a few dialogs are included:
+1. new User dialog
+2. new Offer dialog
 
-## Code scaffolding
+Build with Angular material library and bootstrap 5
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+notice that a lot of code were reused from the past, or from searching the web, but I never take code I don't understand what it does.
 
-## Build
+note that the application is supposed to communicate with it back end running on localhost:3006 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+the project was build on Angular V12. in order to run just hit `ng serve` and watch the magic happen.
